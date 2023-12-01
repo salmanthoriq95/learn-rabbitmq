@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "rmq": "Docker run --name rabbitmq -p 5672:5672 rabbitmq",
-    "start:dev": "nodemon src/server.ts"
+    "start:dev": "nodemon src/server.ts",
+    "install:dev": "Docker run --name rabbitmq -p 5672:5672 rabbitmq && npm install"
   },
   "keywords": [],
   "author": "",
