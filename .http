@@ -1,0 +1,33 @@
+### consumer
+GET http://localhost:3000/consumer/?channelName=Developer
+
+### publisher
+POST http://localhost:3000/publisher/channel
+Content-Type: application/json
+
+{
+  "name": "new channel",
+  "subscribers": [{
+    "email": "salman@salman.com"
+  }]
+}
+
+### publisher
+POST http://localhost:3000/publisher/subscriber
+Content-Type: application/json
+
+{
+  "name": "Developer",
+  "subscribers": [{
+    "email": "salman@salman.com"
+  }]
+}
+
+### publisher
+POST http://localhost:3000/publisher/job
+Content-Type: application/json
+
+{
+  "name": "Developer",
+  "content": "This email send automatic from my local"
+}
