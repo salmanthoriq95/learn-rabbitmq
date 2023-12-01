@@ -23,7 +23,7 @@ class PublisherValidator {
   }
   postJob(payload: any) {
     const schema = Joi.object({
-      name: Joi.string().required(),
+      channelName: Joi.string().required(),
       content: Joi.string().required(),
     });
     const { error } = schema.validate(payload);

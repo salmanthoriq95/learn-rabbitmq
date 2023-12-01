@@ -5,12 +5,12 @@ const router = Router();
 
 /**
  * @swagger
- * /publisher/channel/:
- *  post:
- *    summary: Create a new channel
- *    description: Create a new channel, the subscribers key is required which is it have array of objects data types
+ * /consumer:
+ *  get:
+ *    summary: Consume the job
+ *    description: Consume the job which is already queue
  *    tags:
- *      - publisher
+ *      - consumer
  *    parameters:
  *      - name: debug
  *        in: query
@@ -21,7 +21,7 @@ const router = Router();
  *        in: query
  *        required: true
  *        type: string
- *        description: channel name, if not pass it will run for all channels
+ *        description: channel name
  *    responses:
  *      200:
  *        description: Success

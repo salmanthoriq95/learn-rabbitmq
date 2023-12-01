@@ -24,10 +24,10 @@ Content-Type: application/json
 }
 
 ### publisher
-POST http://localhost:3000/publisher/job
+POST http://localhost:3000/publisher/job?debug=1
 Content-Type: application/json
 
 {
-  "name": "Developer",
-  "content": "This email send automatic from my local"
+  "channelName": "Developer",
+  "content": "This email send automatic for Devs"
 }

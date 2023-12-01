@@ -4,7 +4,8 @@ import HttpExpection from '../../errors/HttpException';
 class ConsumerValidator {
   get(payload: any) {
     const schema = Joi.object({
-      channelName: Joi.string(),
+      debug: Joi.number().optional(),
+      channelName: Joi.string().required(),
     });
     const { error } = schema.validate(payload);
     if (error) {

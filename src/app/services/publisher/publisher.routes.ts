@@ -101,10 +101,10 @@ router.post('/subscriber', publisherController.postSubs);
 
 /**
  * @swagger
- * /publisher/subsciber/:
+ * /publisher/job/:
  *  post:
- *    summary: Create a new channel
- *    description: Create a new channel, the subscribers key is required which is it have array of objects data types
+ *    summary: Send a new job
+ *    description: Create a new job for a channel
  *    tags:
  *      - publisher
  *    parameters:
@@ -120,14 +120,14 @@ router.post('/subscriber', publisherController.postSubs);
  *          schema:
  *            type: object
  *            properties:
- *              name:
+ *              channelName:
  *                type: string
- *                example: salman
+ *                example: Developer
  *              content:
  *                type: string
  *                example: hello world
  *            required:
- *              - name
+ *              - channelName
  *              - content
  *    responses:
  *      200:

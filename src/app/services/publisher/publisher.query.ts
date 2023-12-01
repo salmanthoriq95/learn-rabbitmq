@@ -18,14 +18,13 @@ class PublisherQuery {
       },
     ];
   }
-  async readChannels(channelName?: string) {
+  async readChannels(channelName: string) {
     for (let i = 0; i < this.channels.length; i++) {
       const channel = this.channels[i];
-      if (channelName && channel.name === channelName) {
+      if (channel.name.toLowerCase() === channelName.toLowerCase()) {
         return channel;
       }
     }
-    return this.channels;
   }
 
   async addChannel(channel: {
